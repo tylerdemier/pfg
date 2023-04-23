@@ -43,7 +43,9 @@ app.use(express.urlencoded({extended: false}))
  * @desc: Routes.
  */
 const index_route = require('./app/models/routes/index_routes')
-app.use('/', index_route);
+const aboutUs_route = require('./app/models/routes/aboutUs_routes')
+app.use('/', index_route)
+app.use('/', aboutUs_route)
 /**
 app.get('/', (req, res)=>{
     conn.query("SELECT Id, Name FROM Account", (err, response)=>{
