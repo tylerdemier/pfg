@@ -2094,6 +2094,10 @@ input, select, textarea {
 		color: #6b7770;
 	}
 
+	form input[type="radio"] {
+		-webkit-appearance: radio;
+	}
+
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],

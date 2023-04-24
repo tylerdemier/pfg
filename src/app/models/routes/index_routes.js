@@ -1,6 +1,6 @@
 /**
- * @name: Index_routes
- * @desc Defines the index_route of the project.
+ * @name: index_routes
+ * @desc: Defines the index_route of the project.
  */
 const express = require('express')
 

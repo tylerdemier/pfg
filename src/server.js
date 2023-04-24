@@ -44,8 +44,11 @@ app.use(express.urlencoded({extended: false}))
  */
 const index_route = require('./app/models/routes/index_routes')
 const aboutUs_route = require('./app/models/routes/aboutUs_routes')
+const startConnecting_route = require('./app/models/routes/startConnecting_routes')
 app.use('/', index_route)
 app.use('/', aboutUs_route)
+app.use('/', startConnecting_route)
+
 /**
 app.get('/', (req, res)=>{
     conn.query("SELECT Id, Name FROM Account", (err, response)=>{

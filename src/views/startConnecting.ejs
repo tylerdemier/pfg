@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Start Exchanging!</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" href="../images/TDM.svg">
 </head>
-<body class="is-preload">
-<div id="page-wrapper">
 
+<body class="is-preload">
+
+<div id="page-wrapper">
     <!-- Header -->
     <header id="header">
         <div class="logo container">
@@ -25,6 +29,78 @@
             <li><a href="/aboutUs">About Us</a></li>
         </ul>
     </nav>
+
+    <section id="main">
+    <div class="container">
+            <form action="" method="POST">
+                <!-- Name and first name -->
+                <div class="row">
+                    <div>
+                        <label for="firstname">First name</label>
+                        <label>
+                            <input type="text" name="firstname"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="lastname">Last name</label>
+                        <label>
+                            <input type="text" name="lastname"/>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Email and number -->
+                <div>
+                    <div>
+                        <label for="email">E-Mail</label>
+                        <label>
+                            <input type="email" name="email"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <label>
+                            <input type="text" name="phone"/>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Selection -->
+                <div>
+                    <label>What are you looking for?</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="type" value="seller">
+                            Selling
+                            <input type="radio" name="type" value="buyer">
+                            Buying
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="message">Message</label>
+                    <label>
+                        <textarea rows="6" name="message" placeholder="Type your message"></textarea>
+                    </label>
+                </div>
+
+                <button>Send Message</button>
+
+            </form>
+        </div>
+    </section>
 </div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.dropotron.min.js"></script>
+<script src="../js/jquery.scrolly.min.js"></script>
+<script src="../js/browser.min.js"></script>
+<script src="../js/breakpoints.min.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://kit.fontawesome.com/ab702fc57c.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

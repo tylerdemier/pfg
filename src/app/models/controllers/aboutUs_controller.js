@@ -1,5 +1,5 @@
 /**
- * @name: AboutUs_controller
+ * @name: aboutUs_controller
  * @desc: Controller for the aboutUs_routes.
  */
 const aboutUs_page = (req, res)=>{
