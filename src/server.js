@@ -7,25 +7,8 @@ const app = express()
  * @module: jsforce:
  */
 const path = require('path')
-const jsforce = require('jsforce')
 
 require('dotenv').config()
-
-/**
- * @desc: Connection with Salesforce.
- */
-const {SF_LOGIN_URL, SF_USERNAME, SF_PASSWORD, SF_TOKEN} = process.env
-const conn = new jsforce.Connection({
-    loginUrl:SF_LOGIN_URL
-})
-conn.login(SF_USERNAME, SF_PASSWORD + SF_TOKEN, (err, response) => {
-    if (err) {
-        console.error(err)
-    } else {
-        console.log("User ID:" + response.id)
-        console.log("Org ID:" + response.organizationId)
-    }
-})
 
 /**
  * @desc: Settings.
@@ -37,6 +20,7 @@ app.set('view engine', 'ejs');
 /**
  * @desc: Middlewares.
  */
+app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 /**
@@ -75,4 +59,6 @@ app.listen(app.get('port'), ()=>{
     console.log('Server is running at http://localhost:', app.get('port'))
 })
 
-module.exports = app
+module.exports = {
+    app
+}
